@@ -1,7 +1,7 @@
 %define	module	Gtk2-Ex-PodViewer
 %define	name	perl-%{module}
 %define	version	0.17
-%define	release	%mkrel 1
+%define	release	%mkrel 2
 
 Name:		%{name}
 Version:	%{version}
