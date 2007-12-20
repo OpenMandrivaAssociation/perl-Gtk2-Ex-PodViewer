@@ -26,6 +26,7 @@ Conflicts:	drakxtools < 9.1-15mdk
 Obsoletes:	perl-Gtk2-PodViewer
 Provides:	perl-Gtk2-PodViewer
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Gtk2::PodViewer is a widget for rendering Perl POD documents. It is based on
