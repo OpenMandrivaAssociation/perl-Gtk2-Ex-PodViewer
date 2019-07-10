@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Release:	5
 
 Summary:	A Gtk2 widget for displaying Plain old Documentation (POD)
 License:	GPL+ or Artistic
@@ -19,6 +19,7 @@ BuildRequires:	perl(ExtUtils::Depends)
 BuildRequires:	perl(IO::Stringy)
 BuildRequires:	perl(Pod::Simple)
 BuildRequires:	perl(Locale::gettext)
+BuildRequires:  perl(Pod::Parser)
 BuildArch:	noarch
 
 Requires:	perl(Glib) >= 1.00
@@ -38,13 +39,10 @@ chmod 644 README
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-%make
-
-%check
-make test
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README
