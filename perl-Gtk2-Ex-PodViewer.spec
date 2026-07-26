@@ -1,15 +1,13 @@
 %define	upstream_name	 Gtk2-Ex-PodViewer
-%define	upstream_version 0.18
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	0.18
+Release:	6
 
 Summary:	A Gtk2 widget for displaying Plain old Documentation (POD)
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Gtk2/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:        https://metacpan.org/dist/%{upstream_name}/
+Source0:	http://www.cpan.org/modules/by-module/Gtk2/%{upstream_name}-%{version}.tar.bz2
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -34,7 +32,7 @@ the Gtk2::TextView widget and uses Pod::Parser for manipulating POD data.
 podviewer uses it in order to render POD documentation
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 find -type d -name CVS | rm -rf 
 chmod 644 README
 
@@ -55,9 +53,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 %changelog
 * Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.180.0-1mdv2010.0
 + Revision: 403228
-- rebuild using %%perl_convert_version
-
-* Sat Oct 11 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.18-1mdv2009.1
+- rebuild using %0.18 Sat Oct 11 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.18-1mdv2009.1
 + Revision: 292165
 - update to new version 0.18
 
